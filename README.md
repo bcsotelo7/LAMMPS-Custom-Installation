@@ -16,7 +16,8 @@ sudo ./lammps-custom-kspace-openmpi-BrunoS.sh -s
 
 In addition, for more options, you may run `./lammps-custom-kspace-openmpi-BrunoS.sh -h`
 
-```[uprod_sZSip@ip-10-25-84-68 ~/work]$ ./lammps-custom-kspace-openmpi-BrunoS.sh -h
+```
+./lammps-custom-kspace-openmpi-BrunoS.sh -h
 
 ############################################################################
 ############# LAAMPS APPLICATION INSTALLATION, SETUP & USE #################
@@ -29,7 +30,8 @@ Usage : ./lammps-custom-kspace-openmpi-BrunoS.sh
 [-r Run a job ]
 [-c Setup checker]
 [-b Perform benchmark]
-[-h help commands]```
+[-h help commands]
+```
 
 
 ## Encountered problems and caveats
