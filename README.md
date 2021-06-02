@@ -33,6 +33,31 @@ Usage : ./lammps-custom-kspace-openmpi-BrunoS.sh
 [-h help commands]
 ```
 
+After the installation compltes, to run a job, in the current work directory, you may launch `mpirun` as the following. For instance 4 cores using one of the benchmark models:
+
+Run the following 2 commands:
+```
+export LD_LIBRARY_PATH=/usr/local/lib64:$LD_LIBRARY_PATH
+mpirun -np 4 lmp -i lammps-29Oct20/bench/in.lj
+```
+
+The output will look like:
+
+```
+WARNING on proc 0: Cannot open log.lammps for writing: Permission denied (src/lammps.cpp:427)
+LAMMPS (29 Oct 2020)
+OMP_NUM_THREADS environment is not set. Defaulting to 1 thread. (src/comm.cpp:94)
+  using 1 OpenMP thread(s) per MPI task
+...
+...
+...
+Per MPI rank memory allocation (min/avg/max) = 5.881 | 5.881 | 5.881 Mbytes
+Step Temp E_pair E_mol TotEng Press
+       0         1.44   -6.7733681            0   -4.6134356   -5.0197073
+     100    0.7574531   -5.7585055            0   -4.6223613   0.20726105
+Loop time of 0.490296 on 4 procs for 100 steps with 32000 atoms
+...
+```
 
 ## Encountered problems and caveats
 
@@ -46,3 +71,4 @@ Another challenge was that once I installed everything sucessfully and had a wor
 ## Next Steps
 
 - Complete the benchmark part of assignment (weak and strong scaling)
+- Add mpi4py support to launch lammps open mpi via python
