@@ -2,8 +2,8 @@
 
 ## Synopsis
 - This code was prepared using the Rescale platform using "Bring your own software" with 1 node. This softtware does not have OpenMPI and FFT3 which are required to run this code. They are compiled and installed here.
-- All programs and packages have been conscioulsy been installed in /usr/local directory (Open MPI, LAMMPS, et al). While it is understood that most HPC deployments, software may be installed in /opt
-- For lammps compilation and installation, the executable was built and installed in /usr/local but for some reason the actual tarred lammps folder remained in the work directory. This is where the benchmark files, documentation, etc remained, I was not able to figure this out in addition to setting `-D CMAKE_INSTALL_PREFIX=/usr/local/` correctly.
+- All programs and packages have been intendedly been installed in  `/usr/local` directory (Open MPI, LAMMPS, et al). While it is understood that most HPC deployments, software may be installed in /opt
+- For lammps compilation and installation, the executable was built and installed in `/usr/local` but for some reason the actual tarred lammps folder remained in the work directory. This is where the benchmark files, documentation, etc remained, and I was not able to figure this out in addition to setting `-D CMAKE_INSTALL_PREFIX=/usr/local/` correctly.
 - The benchmark was not completed. I only started the configuration, compilation and installation of the LAAMPS python package and the LAMMPS shared library which required every package to be compiled in shared mode
 
 
@@ -33,7 +33,7 @@ Usage : ./lammps-custom-kspace-openmpi-BrunoS.sh
 [-h help commands]
 ```
 
-After the installation compltes, to run a job, in the current work directory, you may launch `mpirun` as the following. For instance 4 cores using one of the benchmark models:
+After the installation completes, to run a job, in the current work directory, you may launch `mpirun` as the following. For instance 4 cores using one of the benchmark models:
 
 Run the following 2 commands:
 ```
